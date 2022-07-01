@@ -1,10 +1,22 @@
 # React JS 마스터클래스
 
-## 강의노트
+## #2 STYLED COMPONENTS
 
-### #2 STYLED COMPONENTS
-
-#### #2.0 Why Styled Components
+### #2.0 Why Styled Components
 
 - The best way to handle styles in React JS
 - easy to implement light/dark mode
+
+### #2.1 Our First Styled Component
+
+- npm i styled-components
+- `import styled from "styled-components";`
+- write CSS between backticks
+
+```
+const Box = styled.div`
+  background-color: teal;
+  width: 100px;
+  height: 100px;
+`;
+```
