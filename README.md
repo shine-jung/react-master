@@ -20,3 +20,22 @@ const Box = styled.div`
   height: 100px;
 `;
 ```
+
+### #2.2 Adapting and Extending
+
+- configurable property
+- add extra property
+
+```
+const Box = styled.div`
+  background-color: ${(props) => props.bgColor};
+  width: 100px;
+  height: 100px;
+`;
+const Circle = styled(Box)`
+  border-radius: 50px;
+`;
+
+<Box bgColor="teal" />
+<Circle bgColor="tomato" />
+```
