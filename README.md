@@ -62,3 +62,32 @@ const Input = styled.input.attrs({ required: true })`
 <Input />
 <Input />
 ```
+
+### #2.4 Animations and Pseudo Selectors
+
+- { keyframes }
+  - helper function
+- CSS animation
+  - from, to
+  - 0%, 50%, 100%
+- CSS center align
+
+```
+display: flex;
+justify-content: center;
+align-items: center;
+```
+
+- pseudo selector
+
+```
+span {
+  font-size: 36px;
+  &:hover {
+    font-size: 48px;
+  }
+  &:active { // click
+    opacity: 0;
+  }
+}
+```
