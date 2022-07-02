@@ -91,3 +91,23 @@ span {
   }
 }
 ```
+
+### #2.5 Pseudo Selectors part Two
+
+- CSS center of the screen
+
+```
+display: flex;
+height: 100vh;
+width: 100vw;
+justify-content: center;
+align-items: center;
+```
+
+- target styled component
+
+```
+${Emoji}:hover {
+  font-size: 98px;
+}
+```
