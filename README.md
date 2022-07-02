@@ -39,3 +39,26 @@ const Circle = styled(Box)`
 <Box bgColor="teal" />
 <Circle bgColor="tomato" />
 ```
+
+### #2.3 'As' and Attrs
+
+- use the same styles in different tag
+  - as
+- save attributes in styled component
+  - attrs
+
+```
+const Btn = styled.button`
+  color: white;
+  background-color: tomato;
+  border: 0;
+  border-radius: 15px;
+`;
+const Input = styled.input.attrs({ required: true })`
+  background-color: tomato;
+`;
+
+<Btn as="a" href="/">Log in</Btn>
+<Input />
+<Input />
+```

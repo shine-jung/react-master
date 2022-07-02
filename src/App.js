@@ -14,14 +14,24 @@ const Circle = styled(Box)`
 const Text = styled.span`
   color: white;
 `;
+const Btn = styled.button`
+  color: white;
+  background-color: tomato;
+  border: 0;
+  border-radius: 15px;
+`;
+const Input = styled.input.attrs({ required: true, minLength: 10 })`
+  background-color: tomato;
+`;
 
 function App() {
   return (
-    <Father>
-      <Box bgColor="teal">
-        <Text>Hello</Text>
-      </Box>
-      <Circle bgColor="tomato" />
+    <Father as="header">
+      <Btn>Log in</Btn>
+      <Btn as="a" href="/">
+        Log in
+      </Btn>
+      <Input />
     </Father>
   );
 }
