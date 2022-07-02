@@ -132,3 +132,23 @@ ${Emoji}:hover {
   font-size: 98px;
 }
 ```
+
+### #2.7 Themes
+
+- `import { ThemeProvider } from "styled-components";`
+
+```
+// index.js
+const lightTheme = {
+  textColor: "#111",
+};
+
+<ThemeProvider theme={lightTheme}>
+  <App />
+</ThemeProvider>
+
+// App.js
+const Title = styled.h1`
+  color: ${(props) => props.theme.textColor};
+`;
+```
