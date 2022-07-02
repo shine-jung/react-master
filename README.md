@@ -70,6 +70,27 @@ const Input = styled.input.attrs({ required: true })`
 - CSS animation
   - from, to
   - 0%, 50%, 100%
+
+```
+const animation = keyframes`
+  0% {
+    transform: rotate(0deg);
+    border-radius:0px;
+  }
+  50% {
+    border-radius: 100px;
+  }
+  100% {
+    transform:rotate(360deg);
+    border-radius: 0px;
+  }
+`;
+
+const Box = styled.div`
+  animation: ${rotationAnimation} 1.5s linear infinite;
+`;
+```
+
 - CSS center align
 
 ```
