@@ -163,3 +163,9 @@ const Title = styled.h1`
 ```
 const plus = (a:number, b:number) => a + b;
 ```
+
+### #3.1 DefinitelyTyped
+
+- https://create-react-app.dev/docs/adding-typescript/
+- https://github.com/DefinitelyTyped/DefinitelyTyped
+  - @types/
