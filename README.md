@@ -152,3 +152,14 @@ const Title = styled.h1`
   color: ${(props) => props.theme.textColor};
 `;
 ```
+
+## #3 TYPESCRIPT
+
+### #3.0 Introduction
+
+- strongly-typed programming language
+- https://www.typescriptlang.org/play
+
+```
+const plus = (a:number, b:number) => a + b;
+```
