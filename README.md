@@ -225,3 +225,9 @@ const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
   console.log("hello", value);
 };
 ```
+
+### #3.6 Themes
+
+- extend definitions
+  - styled.d.ts
+  - https://styled-components.com/docs/api#typescript
