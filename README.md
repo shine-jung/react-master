@@ -169,3 +169,25 @@ const plus = (a:number, b:number) => a + b;
 - https://create-react-app.dev/docs/adding-typescript/
 - https://github.com/DefinitelyTyped/DefinitelyTyped
   - @types/
+
+### #3.2 Typing the Props
+
+- interface
+  - explain object shape to typescript
+
+```
+interface CircleProps {
+  bgColor: string;
+}
+
+const Container = styled.div<CircleProps>`
+  width: 200px;
+  height: 200px;
+  background-color: ${(props) => props.bgColor};
+  border-radius: 100px; // half of the width
+`;
+
+function Circle({ bgColor }: CircleProps) {
+  return <Container bgColor={bgColor} />;
+}
+```
