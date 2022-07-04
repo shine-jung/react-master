@@ -191,3 +191,13 @@ function Circle({ bgColor }: CircleProps) {
   return <Container bgColor={bgColor} />;
 }
 ```
+
+### #3.3 Optional Props
+
+- `optionalProp?: string;`
+  - `optionalProp: string | undefined;`
+- ?? (nullish coalescing operator)
+  - optionalProp ?? "white"
+  - if optionalProp is null or undefined, return "white"
+- give default values to the props
+  - `funcName({ bgColor, text = "default text" })`
