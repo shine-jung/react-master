@@ -206,3 +206,22 @@ function Circle({ bgColor }: CircleProps) {
 
 - when use more than one types on useState
   - `const [value, Setvalue] = useState<number | string>(0);`
+
+### #3.5 Forms
+
+- protect events
+  - https://reactjs.org/docs/events.html
+
+```
+const [value, setValue] = useState("");
+const onChange = (event: React.FormEvent<HTMLInputElement>) => {
+  const {
+    currentTarget: { value },
+  } = event;
+  setValue(value);
+};
+const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  event.preventDefault();
+  console.log("hello", value);
+};
+```
