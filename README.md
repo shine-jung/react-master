@@ -201,3 +201,8 @@ function Circle({ bgColor }: CircleProps) {
   - if optionalProp is null or undefined, return "white"
 - give default values to the props
   - `funcName({ bgColor, text = "default text" })`
+
+### #3.4 State
+
+- when use more than one types on useState
+  - `const [value, Setvalue] = useState<number | string>(0);`
