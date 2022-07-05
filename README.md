@@ -254,3 +254,19 @@ const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
   - Source Sans Pro
 - color
   - https://flatuicolors.com/palette/gb
+
+### #4.2 Home part One
+
+- Link (react-router-dom)
+  - no refresh
+
+```
+a {
+  text-decoration: none;
+  color:inherit;
+}
+```
+
+- transition
+  - control animation speed when changing CSS properties
+  - `transition: color 0.2s ease-in;`
