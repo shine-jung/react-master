@@ -169,7 +169,7 @@ const plus = (a:number, b:number) => a + b;
 
 - https://create-react-app.dev/docs/adding-typescript/
 - https://github.com/DefinitelyTyped/DefinitelyTyped
-  - @types/
+  - npm i --save-dev @types/
 
 ### #3.2 Typing the Props
 
@@ -235,3 +235,10 @@ const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
 - extend definitions
   - styled.d.ts
   - https://styled-components.com/docs/api#typescript
+
+## #4 CRYPTO TRACKER
+
+### #4.0 Setup
+
+- npm i react-router-dom react-query
+- Router.tsx
