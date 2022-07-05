@@ -158,6 +158,7 @@ const Title = styled.h1`
 ### #3.0 Introduction
 
 - strongly-typed programming language
+- check before the code runs
 - https://www.typescriptlang.org/play
 
 ```
@@ -201,6 +202,9 @@ function Circle({ bgColor }: CircleProps) {
   - if optionalProp is null or undefined, return "white"
 - give default values to the props
   - `funcName({ bgColor, text = "default text" })`
+  - boolean
+    - `<Dummy active={true} /> // default: false`
+    - `<Dummy active />`
 
 ### #3.4 State
 
