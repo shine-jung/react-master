@@ -242,3 +242,15 @@ const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
 
 - npm i react-router-dom react-query
 - Router.tsx
+
+### #4.1 Styles
+
+- Reset CSS
+- createGlobalStyle
+- Fragment
+  - `<></>`
+- font
+  - https://fonts.google.com/
+  - Source Sans Pro
+- color
+  - https://flatuicolors.com/palette/gb
