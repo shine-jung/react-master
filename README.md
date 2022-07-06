@@ -270,3 +270,15 @@ a {
 - transition
   - control animation speed when changing CSS properties
   - `transition: color 0.2s ease-in;`
+
+### #4.3 Home part Two
+
+- async, await
+
+```
+(async () => {
+  const response = await fetch("https://api.coinpaprika.com/v1/coins");
+  const json = await response.json();
+  setCoins(json.slice(0, 100));
+})();
+```
