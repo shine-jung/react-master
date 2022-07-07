@@ -282,3 +282,19 @@ a {
   setCoins(json.slice(0, 100));
 })();
 ```
+
+### #4.4 Route States
+
+- useLocation
+- useParams doesn't need interface
+  - string | undefined
+
+```
+// Coins.tsx
+<Link to={`/${coin.id}`} state={{ name: coin.name }}>
+
+// Coin.tsx
+const { coinId } = useParams();
+const { state } = useLocation() as RouteState;
+<Title>{state?.name || "Loading..."}</Title> // if state is null
+```
