@@ -316,3 +316,9 @@ const { state } = useLocation() as RouteState;
 - json to interface
   - https://app.quicktype.io/?l=ts
   - http://json2ts.com/
+
+### #4.7 Nested Routes part One
+
+- route inside of another route
+- '\*' indicates that a nested route can be render inside the route
+  - `<Route path="/:coinId/*" element={<Coin />} />`
