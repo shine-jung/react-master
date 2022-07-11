@@ -273,7 +273,10 @@ a {
 
 ### #4.3 Home part Two
 
-- async, await
+- await
+  - wait Promiss
+  - use in **async function**
+  - pause async function until Promise is fulfilled or rejected
 
 ```
 (async () => {
@@ -298,3 +301,18 @@ const { coinId } = useParams();
 const { state } = useLocation() as RouteState;
 <Title>{state?.name || "Loading..."}</Title> // if state is null
 ```
+
+### #4.6 Data Types
+
+- put 'I' in front of interface name
+- create interface quickly
+  - `console.log(data);`
+  - in Chrome, click 'Store as global variable'
+  - `Object.keys(temp1).join()`
+  - `Object.values(temp1).map(v => typeof v).join()`
+  - use 'option + shift + i' to match each key and type
+    - move cursor to end of all lines
+  - watch out the object type
+- json to interface
+  - https://app.quicktype.io/?l=ts
+  - http://json2ts.com/
