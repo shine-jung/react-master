@@ -39,10 +39,10 @@ function Coin() {
   const [priceinfo, setPriceInfo] = useState({});
   useEffect(() => {
     (async () => {
-      const infoData = (
+      const infoData = await (
         await fetch(`https://api.coinpaprika.com/v1/coins/${coinId}`)
       ).json();
-      const priceData = (
+      const priceData = await (
         await fetch(`https://api.coinpaprika.com/v1/tickers/${coinId}`)
       ).json();
       setInfo(infoData);
