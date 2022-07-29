@@ -195,7 +195,7 @@ function Coin() {
 
           <Routes>
             {/* support relative path */}
-            <Route path="chart" element={<Chart />} />
+            <Route path="chart" element={<Chart coinId={coinId as string} />} />
             <Route path="price" element={<Price />} />
           </Routes>
         </>
