@@ -322,3 +322,22 @@ const { state } = useLocation() as RouteState;
 - route inside of another route
 - '\*' indicates that a nested route can be render inside the route
   - `<Route path="/:coinId/*" element={<Coin />} />`
+
+### #4.8 Nested Routes part Two
+
+- useMatch
+  - returns match data about a route at the given path relative to the current location
+- Outlet
+  - useful in nested routes
+- NavLink
+  - can use 'isActive'
+- more about react router
+  - https://reactrouter.com/docs/en/v6
+- custom props on styled components
+
+```
+const Tab = styled.span<{ isActive: boolean }>`
+  color: ${(props) =>
+    props.isActive ? props.theme.accentColor : props.theme.textColor};
+`;
+```
