@@ -353,3 +353,26 @@ const Tab = styled.span<{ isActive: boolean }>`
 ```
 const { isLoading, data } = useQuery<ICoin[]>("allCoins", fetchCoins);
 ```
+
+### #4.10 React Query part Two
+
+- Destructuring assignment
+
+```
+const { isLoading: infoLoading, data: infoData } = useQuery<InfoData>(
+  ["info", coinId],
+  () => fetchCoinInfo(coinId ?? "")
+);
+const { isLoading: tickersLoading, data: tickersData } = useQuery<PriceData>(
+  ["tickers", coinId],
+  () => fetchCoinTickers(coinId ?? "")
+);
+```
+
+- when argument of fetchCoinInfo is only string
+  - 'coinId' is never null
+    - fetchCoinInfo(coinId!)
+      - non-null assertion operator
+  - 'coinId' can be null
+    - fetchCoinInfo(coinId ?? "")
+      - nullish coalescing operator
