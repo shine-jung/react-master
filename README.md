@@ -341,3 +341,15 @@ const Tab = styled.span<{ isActive: boolean }>`
     props.isActive ? props.theme.accentColor : props.theme.textColor};
 `;
 ```
+
+### #4.9 React Query part One
+
+- fetcher function
+  - returns fetch promise
+- useQuery(queryKey, fetcher function);
+  - returns isLoading, data
+  - keeps the data on the cache (caching)
+
+```
+const { isLoading, data } = useQuery<ICoin[]>("allCoins", fetchCoins);
+```
