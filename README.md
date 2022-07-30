@@ -376,3 +376,8 @@ const { isLoading: tickersLoading, data: tickersData } = useQuery<PriceData>(
   - 'coinId' can be null
     - fetchCoinInfo(coinId ?? "")
       - nullish coalescing operator
+
+### #4.13 Price Chart part Two
+
+- APEXCHARTS.JS
+  - https://apexcharts.com/
