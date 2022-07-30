@@ -381,3 +381,11 @@ const { isLoading: tickersLoading, data: tickersData } = useQuery<PriceData>(
 
 - APEXCHARTS.JS
   - https://apexcharts.com/
+
+### #4.15 Final Touches
+
+- 3rd argument of useQuery
+  - options object
+    - refetchInterval
+- react-helmet-async
+  - document head
