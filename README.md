@@ -389,3 +389,22 @@ const { isLoading: tickersLoading, data: tickersData } = useQuery<PriceData>(
     - refetchInterval
 - react-helmet-async
   - document head
+
+## #5 STATE MANAGEMENT
+
+### #5.0 Dark Mode part One
+
+- recoil
+  - a state management library
+    - good for small project
+
+### #5.1 Dark Mode part Two
+
+- interface of function
+
+```
+interface IRouterProps {
+  toggleDark: () => void;
+}
+// need global state
+```
