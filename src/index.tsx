@@ -1,10 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { QueryClient, QueryClientProvider } from "react-query";
-import { ThemeProvider } from "styled-components";
-import { HelmetProvider } from "react-helmet-async";
 import App from "./App";
-import { theme } from "./theme";
 
 const queryClient = new QueryClient();
 
@@ -14,11 +11,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
-      <ThemeProvider theme={theme}>
-        <HelmetProvider>
-          <App />
-        </HelmetProvider>
-      </ThemeProvider>
+      <App />
     </QueryClientProvider>
   </React.StrictMode>
 );
