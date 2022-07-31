@@ -408,3 +408,10 @@ interface IRouterProps {
 }
 // need global state
 ```
+
+### #5.2 Introduction to Recoil
+
+- Recoil
+  - RecoilRoot
+  - atom({key, default})
+  - useRecoilValue
