@@ -1,5 +1,10 @@
-import { createGlobalStyle } from "styled-components";
-import ToDoList from "./ToDoList";
+import { createGlobalStyle, ThemeProvider } from "styled-components";
+import { HelmetProvider } from "react-helmet-async";
+import Router from "./Router";
+import { ReactQueryDevtools } from "react-query/devtools";
+import { darkTheme, lightTheme } from "./theme";
+import { useRecoilValue } from "recoil";
+import { isDarkAtom } from "./atoms";
 
 const GlobalStyle = createGlobalStyle`
   html, body, div, span, applet, object, iframe,
@@ -66,10 +71,16 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 function App() {
+  const isDark = useRecoilValue(isDarkAtom);
   return (
     <>
-      <GlobalStyle />
-      <ToDoList />
+      <ThemeProvider theme={isDark ? darkTheme : lightTheme}>
+        <GlobalStyle />
+        <HelmetProvider>
+          <Router />
+        </HelmetProvider>
+        <ReactQueryDevtools />
+      </ThemeProvider>
     </>
   );
 }
