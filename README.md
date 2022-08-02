@@ -460,8 +460,8 @@ const { value } = event.currentTarget;
 
 - React Hook Form
   - https://react-hook-form.com/
-  - useForm
-    - register(name, optionObj?)
+  - useForm({ defaultValues: {} }?)
+    - register(name, optionsObj?)
       - name
       - onBlur
       - onChange
@@ -469,22 +469,37 @@ const { value } = event.currentTarget;
     - watch
     - handleSubmit(onValid, onInvalid?)
     - formState
+  - register optionsObj
+    - required
+    - minLength
+    - pattern
+- RegExp
+  - https://www.regexpal.com/
 
 ```
 function ToDoList() {
-  const { register, handleSubmit, formState } = useForm();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<IForm>({ defaultValues: {} });
   const onValid = (data: any) => {
     console.log(data);
   };
-  console.log(formState.errors);
   return (
     <div>
       <form onSubmit={handleSubmit(onValid)}>
-        <input {...register("email", { required: true })} placeholder="Email" />
         <input
-          {...register("username", { required: true, minLength: 10 })}
-          placeholder="Username"
+          {...register("email", {
+            required: "Email is required",
+            pattern: {
+              value: /^[A-Za-z0-9._%+-]+@naver.com$/,
+              message: "Only naver.com emails allowed",
+            },
+          })}
+          placeholder="Email"
         />
+        <span>{errors?.email?.message}</span>
         <input
           {...register("password", {
             required: "Password is required",
@@ -495,8 +510,11 @@ function ToDoList() {
           })}
           placeholder="Password"
         />
+        <span>{errors?.password?.message}</span>
         <button>Add</button>
       </form>
     </div>
   );
+}
+
 ```
