@@ -469,10 +469,12 @@ const { value } = event.currentTarget;
     - watch
     - handleSubmit(onValid, onInvalid?)
     - formState
+    - setError(name, errorObj, { shouldFocus? })
   - register optionsObj
     - required
     - minLength
     - pattern
+    - validate
 - RegExp
   - https://www.regexpal.com/
 
@@ -517,4 +519,33 @@ function ToDoList() {
   );
 }
 
+```
+
+### 5.9 Custom Validation
+
+- setError(name, errorObj, { shouldFocus? })
+
+```
+const onValid = (data: IForm) => {
+  if (data.password !== data.password1) {
+    setError("password1", { message: "Password are not the same" });
+  }
+  // setError("extraError", { message: "Server offline." });
+};
+```
+
+- validate
+
+```
+<input
+  {...register("firstName", {
+    required: "write here",
+    validate: {
+      noNico: (value) => !value.includes("nico") || "no nicos allowed",
+      noNick: (value) => !value.includes("nick") || "no nicks allowed",
+      // async (value) => check server
+    },
+  })}
+  placeholder="First Name"
+/>;
 ```
