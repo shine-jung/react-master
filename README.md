@@ -470,6 +470,7 @@ const { value } = event.currentTarget;
     - handleSubmit(onValid, onInvalid?)
     - formState
     - setError(name, errorObj, { shouldFocus? })
+    - setValue
   - register optionsObj
     - required
     - minLength
