@@ -579,7 +579,23 @@ const onClick = (event: React.MouseEvent<HTMLButtonElement>) => {
 
 ### #5.14 Immutability part One
 
-- update category
+- update category with same order
   1. find index of the target to do based on id
   2. build a new to do
   3. replace the to do in the target index with new to do
+
+```
+setToDos((oldToDos) => {
+  const targetIndex = oldToDos.findIndex((toDo) => toDo.id === id);
+  const newTodo = { text, id, category: name as any };
+  return [
+    ...oldToDos.slice(0, targetIndex),
+    newTodo,
+    ...oldToDos.slice(targetIndex + 1),
+  ];
+});
+```
+
+- another way
+  - splice
+  - map
