@@ -414,9 +414,14 @@ interface IRouterProps {
 - Recoil
   - RecoilRoot
   - atom({key, default})
-  - useRecoilValue // getter
-  - useSetRecoilState // setter
-    - rerender
+  - useRecoilValue
+    - getter
+  - useSetRecoilState
+    - setter
+    - re-render
+  - useRecoilState
+    - [value, setValue]
+    - similar to useState
 
 ### #5.5 To Do Setup
 
@@ -550,3 +555,9 @@ const onValid = (data: IForm) => {
   placeholder="First Name"
 />;
 ```
+
+### #5.11 Add To Do
+
+- to add a new value to the old array in setter
+  - `setToDos((oldToDos) => [{ text: toDo, category: "TO_DO" }, ...oldToDos]);`
+    - spread syntax
