@@ -576,3 +576,10 @@ const onClick = (event: React.MouseEvent<HTMLButtonElement>) => {
   } = event;
 };
 ```
+
+### #5.14 Immutability part One
+
+- update category
+  1. find index of the target to do based on id
+  2. build a new to do
+  3. replace the to do in the target index with new to do
