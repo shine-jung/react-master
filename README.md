@@ -561,3 +561,18 @@ const onValid = (data: IForm) => {
 - to add a new value to the old array in setter
   - `setToDos((oldToDos) => [{ text: toDo, category: "TO_DO" }, ...oldToDos]);`
     - spread syntax
+
+### #5.13 Categories
+
+- typescript tip
+  - use element of interface
+    - `newCategory: IToDo["category"]`
+- receiving the name from the button via the event
+
+```
+const onClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+  const {
+    currentTarget: { name },
+  } = event;
+};
+```
