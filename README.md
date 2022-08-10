@@ -605,3 +605,14 @@ setToDos((oldToDos) => {
 - selector({ key, get })
   - derived state
   - modify output of atom
+
+```
+export const toDoSelector = selector({
+  key: "toDoSelector",
+  get: ({ get }) => {
+    const toDos = get(toDoState);
+    const category = get(categoryState);
+    return toDos.filter((toDo) => toDo.category === category);
+  },
+});
+```
