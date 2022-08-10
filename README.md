@@ -599,3 +599,9 @@ setToDos((oldToDos) => {
 - another way
   - splice
   - map
+
+### #5.16 Selectors part One
+
+- selector({ key, get })
+  - derived state
+  - modify output of atom
