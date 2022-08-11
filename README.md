@@ -616,3 +616,21 @@ export const toDoSelector = selector({
   },
 });
 ```
+
+### #5.18 Enums
+
+- enum
+  - https://www.typescriptlang.org/ko/docs/handbook/enums.html
+
+```
+export enum Categories {
+  "TO_DO" = "TO_DO",
+  "DOING" = "DOING",
+  "DONE" = "DONE",
+}
+
+export const categoryState = atom<Categories>({
+  key: "category",
+  default: Categories.TO_DO,
+});
+```
