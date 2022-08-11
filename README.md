@@ -634,3 +634,9 @@ export const categoryState = atom<Categories>({
   default: Categories.TO_DO,
 });
 ```
+
+### #5.19 Recap
+
+- Recoil
+  - https://recoiljs.org/
+  - recoil-persist
