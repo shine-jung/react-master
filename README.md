@@ -640,3 +640,10 @@ export const categoryState = atom<Categories>({
 - Recoil
   - https://recoiljs.org/
   - recoil-persist
+
+## #6 TRELLO CLONE
+
+### #6.0 Get Selectors
+
+- string to number
+  - `+"1"` -> `1`
