@@ -647,3 +647,24 @@ export const categoryState = atom<Categories>({
 
 - string to number
   - `+"1"` -> `1`
+
+### #6.1 Set Selectors
+
+- useRecoilState(selector)
+  - [0] -> value return by get property
+  - [1] -> call set property
+- set
+
+```
+export const hourSelector = selector<number>({
+  key: "hours",
+  get: ({ get }) => {
+    const minutes = get(minuteState);
+    return minutes / 60;
+  },
+  set: ({ set }, newValue) => {
+    const minutes = Number(newValue) * 60;
+    set(minuteState, minutes);
+  },
+});
+```
