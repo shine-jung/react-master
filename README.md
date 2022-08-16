@@ -668,3 +668,25 @@ export const hourSelector = selector<number>({
   },
 });
 ```
+
+### #6.2 Drag and Drop part One
+
+- react-beautiful-dnd
+  - https://github.com/atlassian/react-beautiful-dnd#readme
+
+```
+<DragDropContext onDragEnd={onDragEnd}>
+  <Droppable droppableId="one">
+    {() => (
+      <ul>
+        <Draggable draggableId="first" index={0}>
+          {() => <li>One</li>}
+        </Draggable>
+        <Draggable draggableId="second" index={1}>
+          {() => <li>Two</li>}
+        </Draggable>
+      </ul>
+    )}
+  </Droppable>
+</DragDropContext>;
+```
