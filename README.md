@@ -553,7 +553,7 @@ const onValid = (data: IForm) => {
     },
   })}
   placeholder="First Name"
-/>;
+/>
 ```
 
 ### #5.11 Add To Do
@@ -673,24 +673,39 @@ export const hourSelector = selector<number>({
 
 - react-beautiful-dnd
   - https://github.com/atlassian/react-beautiful-dnd#readme
+  - provided
+    - placeholder
 
 ```
 <DragDropContext onDragEnd={onDragEnd}>
-  <div>
-    <Droppable droppableId="one">
-      {(provided) => (
-        <ul ref={provided.innerRef} {...provided.droppableProps}>
-          <Draggable draggableId="first" index={0}>
-            {(provided) => (
-              <li ref={provided.innerRef} {...provided.draggableProps}>
-                <span {...provided.dragHandleProps}>🔥</span>
-                One
-              </li>
-            )}
-          </Draggable>
-        </ul>
-      )}
-    </Droppable>
-  </div>
+  <Wrapper>
+    <Boards>
+      <Droppable droppableId="one">
+        {(provided) => (
+          <Board ref={provided.innerRef} {...provided.droppableProps}>
+            {toDos.map((toDo, index) => (
+              <Draggable draggableId={toDo} index={index}>
+                {(provided) => (
+                  <Card
+                    ref={provided.innerRef}
+                    {...provided.draggableProps}
+                    {...provided.dragHandleProps}
+                  >
+                    {toDo}
+                  </Card>
+                )}
+              </Draggable>
+            ))}
+            {provided.placeholder}
+          </Board>
+        )}
+      </Droppable>
+    </Boards>
+  </Wrapper>
 </DragDropContext>
 ```
+
+### #6.4 Styles and Placeholders
+
+- ts tip
+  - right click -> Go to Type Definition
