@@ -755,3 +755,24 @@ export default React.memo(DragabbleCard);
   - return value array
 - `Object.keys(o).map(id => o[id])`
   - can use id and values
+
+### #6.9 Same Board Movement
+
+- css tip
+  - gap
+- overwrite
+
+```
+if (destination?.droppableId === source.droppableId) {
+  // same board movement.
+  setToDos((allBoards) => {
+    const boardCopy = [...allBoards[source.droppableId]];
+    boardCopy.splice(source.index, 1);
+    boardCopy.splice(destination.index, 0, draggableId);
+    return {
+      ...allBoards,
+      [source.droppableId]: boardCopy,
+    };
+  });
+}
+```
