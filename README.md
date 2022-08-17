@@ -712,7 +712,26 @@ export const hourSelector = selector<number>({
 
 ### #6.5 Reordering
 
-1. delete the source.index from the array
-2. insert what we just deleted at destination.index
+1. Delete item on source.index
+2. Put back the item on the destination.index
 
 - splice(start, deleteCount?, ...items)
+
+### #6.6 Reordering part Two
+
+- never mutate in the state world
+- key of Draggable needs to same as the draggableId
+
+```
+const onDragEnd = ({ draggableId, destination, source }: DropResult) => {
+  if (!destination) return;
+  setToDos((oldToDos) => {
+    const toDosCopy = [...oldToDos];
+    // 1) Delete item on source.index
+    toDosCopy.splice(source.index, 1);
+    // 2) Put back the item on the destination.index
+    toDosCopy.splice(destination.index, 0, draggableId);
+    return toDosCopy;
+  });
+};
+```
