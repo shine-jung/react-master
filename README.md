@@ -709,3 +709,10 @@ export const hourSelector = selector<number>({
 
 - ts tip
   - right click -> Go to Type Definition
+
+### #6.5 Reordering
+
+1. delete the source.index from the array
+2. insert what we just deleted at destination.index
+
+- splice(start, deleteCount?, ...items)
