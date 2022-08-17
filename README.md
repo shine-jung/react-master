@@ -735,3 +735,14 @@ const onDragEnd = ({ draggableId, destination, source }: DropResult) => {
   });
 };
 ```
+
+### #6.7 Performance
+
+- so many re-rendering
+- react memo
+  - prevents rendering of component when props did not change
+  - optimization
+
+```
+export default React.memo(DragabbleCard);
+```
