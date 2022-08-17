@@ -746,3 +746,12 @@ const onDragEnd = ({ draggableId, destination, source }: DropResult) => {
 ```
 export default React.memo(DragabbleCard);
 ```
+
+### #6.8 Multi Boards
+
+- Object.keys(o)
+  - return key array
+- Object.values(o)
+  - return value array
+- `Object.keys(o).map(id => o[id])`
+  - can use id and values
