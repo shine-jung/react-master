@@ -674,7 +674,12 @@ export const hourSelector = selector<number>({
 - react-beautiful-dnd
   - https://github.com/atlassian/react-beautiful-dnd#readme
   - provided
+    - innerRef
+    - droppableProps
     - placeholder
+  - snapshot
+    - isDraggingOver
+    - draggingFromThisWith
 
 ```
 <DragDropContext onDragEnd={onDragEnd}>
@@ -794,4 +799,26 @@ if (destination.droppableId !== source.droppableId) {
     };
   });
 }
+```
+
+### #6.11 Droppable Snapshot
+
+- css tip
+  - flex-grow
+- snapshot
+
+```
+const Area = styled.div<IAreaProps>`
+  background-color: ${(props) =>
+    props.isDraggingOver ? "pink" : props.isDraggingFromThis ? "red" : "blue"};
+  flex-grow: 1;
+  transition: background-color 0.3s ease-in-out;
+`;
+
+<Area
+  isDraggingOver={snapshot.isDraggingOver}
+  isDraggingFromThis={Boolean(snapshot.draggingFromThisWith)}
+  ref={provided.innerRef}
+  {...provided.droppableProps}
+>
 ```
