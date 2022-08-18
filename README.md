@@ -673,13 +673,21 @@ export const hourSelector = selector<number>({
 
 - react-beautiful-dnd
   - https://github.com/atlassian/react-beautiful-dnd#readme
-  - provided
-    - innerRef
-    - droppableProps
-    - placeholder
-  - snapshot
-    - isDraggingOver
-    - draggingFromThisWith
+  - drop
+    - provided
+      - innerRef
+      - droppableProps
+      - placeholder
+    - snapshot
+      - isDraggingOver
+      - draggingFromThisWith
+  - drag
+    - provided
+      - innerRef
+      - draggableProps
+      - dragHandleProps
+    - snapshot
+      - isDragging
 
 ```
 <DragDropContext onDragEnd={onDragEnd}>
