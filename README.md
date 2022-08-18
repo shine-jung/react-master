@@ -849,3 +849,8 @@ const onClick = () => {
 <input ref={inputRef} placeholder="grab me" />
 <button onClick={onClick}>Click me</button>
 ```
+
+### #6.14 Task Objects
+
+- number to string
+  - `1 + ""` -> `"1"`
