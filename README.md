@@ -830,3 +830,22 @@ const Area = styled.div<IAreaProps>`
   {...provided.droppableProps}
 >
 ```
+
+### #6.13 Refs
+
+- reference
+  - grab HTML element
+  - to use the methods
+
+```
+const inputRef = useRef<HTMLInputElement>(null);
+const onClick = () => {
+  inputRef.current?.focus();
+  setTimeout(() => {
+    inputRef.current?.blur();
+  }, 5000);
+};
+
+<input ref={inputRef} placeholder="grab me" />
+<button onClick={onClick}>Click me</button>
+```
