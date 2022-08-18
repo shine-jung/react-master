@@ -776,3 +776,22 @@ if (destination?.droppableId === source.droppableId) {
   });
 }
 ```
+
+### #6.10 Cross Board Movement
+
+```
+if (destination.droppableId !== source.droppableId) {
+  // cross board movement.
+  setToDos((allBoards) => {
+    const sourceBoard = [...allBoards[source.droppableId]];
+    const destinationBoard = [...allBoards[destination.droppableId]];
+    sourceBoard.splice(source.index, 1);
+    destinationBoard.splice(destination.index, 0, draggableId);
+    return {
+      ...allBoards,
+      [source.droppableId]: sourceBoard,
+      [destination.droppableId]: destinationBoard,
+    };
+  });
+}
+```
